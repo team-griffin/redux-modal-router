@@ -6,11 +6,15 @@ export const PureModalRouter = ({
   config,
   modal,
   modalComponent,
+  closeModal,
 }) => {
   if(config == null) {
     return cloneElement(modalComponent, {
       key: 'modal',
       isOpen: false,
+      actions: {
+        closeModal,
+      }
     }, [
       (<div/>)
     ]);
@@ -19,10 +23,16 @@ export const PureModalRouter = ({
   return cloneElement(modalComponent, {
     key: 'modal',
     isOpen: modal.open,
+    actions: {
+      closeModal,
+    }
   }, [
     cloneElement(config.component, {
       config,
       modal,
+      actions: {
+        closeModal,
+      }
     }),
   ]);
 };

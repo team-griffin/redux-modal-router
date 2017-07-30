@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { getModal } from '../selectors';
+import { close } from '../signals';
 
 const mapStateToProps = (state) => {
   return {
@@ -10,6 +11,7 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+  closeModal: close,
 }, dispatch);
 
 export const enhance = compose(

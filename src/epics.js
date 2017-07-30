@@ -14,7 +14,7 @@ export const openEpic = (actions$) => r.pipe(
 
 export const closeEpic = (actions$) => r.pipe(
   select(CLOSE),
-  mmapc((action) => closed(action.payload)),
+  mmapc((action) => closed()),
 )(actions$);
 
 export const rootEpic = () => combineEpics([
