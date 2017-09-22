@@ -8,6 +8,6 @@ export const CLOSE = prefix + 'CLOSE';
 export const NAVIGATE = prefix + 'NAVIGATE';
 
 // Creators
-export const open = createAction(OPEN);
+export const open = createAction(OPEN, (route, params) => ({route, params}));
 export const close = createAction(CLOSE);
 export const navigate = createAction(NAVIGATE);

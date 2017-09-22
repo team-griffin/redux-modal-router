@@ -27,7 +27,7 @@ export const PureModalRouter = ({
       closeModal,
     }
   }, [
-    cloneElement(config.component, {
+    createElement(config.component, {
       config,
       modal,
       actions: {
