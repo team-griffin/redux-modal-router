@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React, { cloneElement, createElement } from 'react';
 import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 
@@ -7,32 +7,36 @@ export const PureModalRouter = ({
   modal,
   modalComponent,
   closeModal,
+  ...rest,
 }) => {
   if(config == null) {
-    return cloneElement(modalComponent, {
+    return createElement(modalComponent, {
       key: 'modal',
       isOpen: false,
       actions: {
         closeModal,
-      }
+      },
+      ...rest,
     }, [
       (<div/>)
     ]);
   }
 
-  return cloneElement(modalComponent, {
+  return createElement(modalComponent, {
     key: 'modal',
     isOpen: modal.open,
     actions: {
       closeModal,
-    }
+    },
+    ...rest,
   }, [
-    cloneElement(config.component, {
+    createElement(config.component, {
       config,
       modal,
       actions: {
         closeModal,
-      }
+      },
+      ...rest,
     }),
   ]);
 };
