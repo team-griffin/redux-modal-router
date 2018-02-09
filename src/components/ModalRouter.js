@@ -9,32 +9,36 @@ export const PureModalRouter = ({
   closeModal,
 }) => {
   if(config == null) {
-    return cloneElement(modalComponent, {
+    return cloneElement(
+      modalComponent,
+      {
+        key: 'modal',
+        isOpen: false,
+        actions: {
+          closeModal,
+        }
+      },
+      (<div/>)
+    );
+  }
+
+  return cloneElement(
+    modalComponent,
+    {
       key: 'modal',
-      isOpen: false,
+      isOpen: modal.open,
       actions: {
         closeModal,
       }
-    }, [
-      (<div/>)
-    ]);
-  }
-
-  return cloneElement(modalComponent, {
-    key: 'modal',
-    isOpen: modal.open,
-    actions: {
-      closeModal,
-    }
-  }, [
+    },
     cloneElement(config.component, {
       config,
       modal,
       actions: {
         closeModal,
       }
-    }),
-  ]);
+    })
+  );
 };
 
 export const enhance = compose(
