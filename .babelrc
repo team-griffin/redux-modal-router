@@ -1,0 +1,28 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ],
+        },
+        "modules": false,
+        "useBuiltIns": false,
+      }
+    ]
+  ],
+
+  "plugins": [
+    ["transform-object-rest-spread", { "useBuiltIns": true }],
+    "ramda"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}
