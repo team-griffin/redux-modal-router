@@ -1,5 +1,5 @@
 import { select, combineEpics } from 'redux-most';
-import r from 'ramda';
+import * as r from 'ramda';
 import * as most from 'most';
 import { OPEN, CLOSE, NAVIGATE } from './signals';
 import { opened, closed, navigated } from './messages';
