@@ -1,6 +1,6 @@
 {
   "name": "@team-griffin/redux-modal-router",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "main": "dist/cjs/redux-modal-router.js",
   "module": "dist/es/redux-modal-router.js",
   "repository": "git@github.com:team-griffin/redux-modal-router.git",
@@ -53,7 +53,7 @@
     "ramda": "^0.x.x",
     "react-redux": "^5.0.7",
     "reactcss": "^1.2.2",
-    "recompose": "^0.26.0",
+    "recompose": "^0.x.x",
     "redux": "^3.7.2",
     "redux-actions": "^2.3.0",
     "redux-create-reducer": "^1.1.1",
