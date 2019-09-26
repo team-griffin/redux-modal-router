@@ -34,31 +34,33 @@
     "eslint": "^4.18.2",
     "eslint-plugin-flowtype": "^2.46.1",
     "mocha": "^5.0.4",
+    "most": "^1.5.0",
     "nyc": "^11.6.0",
-    "react-modal": "^3.3.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.3.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.2",
+    "redux-most": "^0.8.0",
     "rollup": "^0.56.5",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-local-resolve": "^1.0.7"
   },
   "peerDependencies": {
+    "most": "^1.5.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-most": "^0.8.0"
   },
   "dependencies": {
-    "most": "^1.5.0",
-    "prop-types": "^15.6.1",
     "ramda": "^0.x.x",
-    "react-redux": "^5.0.7",
-    "reactcss": "^1.2.2",
     "recompose": "^0.x.x",
-    "redux": "^3.7.2",
     "redux-actions": "^2.3.0",
-    "redux-create-reducer": "^1.1.1",
-    "redux-most": "^0.6.3",
-    "reselect": "^3.0.1"
+    "redux-create-reducer": "^2.0.0",
+    "reselect": "^4.0.0"
   },
   "nyc": {
     "require": [
