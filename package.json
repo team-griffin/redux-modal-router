@@ -1,6 +1,6 @@
 {
   "name": "@team-griffin/redux-modal-router",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/cjs/redux-modal-router.js",
   "module": "dist/es/redux-modal-router.js",
   "repository": "git@github.com:team-griffin/redux-modal-router.git",
