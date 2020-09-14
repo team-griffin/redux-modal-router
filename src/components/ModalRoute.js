@@ -1,26 +1,19 @@
 import React from 'react';
-import * as r from 'ramda';
-import {
-  setDisplayName,
-  compose,
-} from 'recompose';
 
-const PureModalRoute = ({
+const ModalRoute = ({
   matched,
   render,
   params,
   closeModal,
-}) => r.ifElse(
-  r.equals(true),
-  () => render({
-    params,
-    closeModal,
-  }),
-  r.always(null),
-)(matched);
+}) => {
+  if (matched) {
+    return render({
+      params,
+      closeModal,
+    });
+  }
+  return null;
+};
+ModalRoute.displayName = 'ModalRoute';
 
-const enhance = compose(
-  setDisplayName('ModalRoute'),
-);
-
-export default enhance(PureModalRoute);
+export default ModalRoute;
